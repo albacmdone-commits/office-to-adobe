@@ -1,0 +1,207 @@
+/*!
+ * Minimal Semantic UI replacement for office-get.com
+ * Only the components actually used: container, grid, segment, button, form, header, label, table
+ * Replaces /semantic.min.css (526 KB) — ~5 KB
+ * Generated 2026-04-21
+ */
+
+/* ====================== CONTAINER ====================== */
+.ui.container {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media only screen and (min-width: 768px) {
+    .ui.container { width: 723px; margin-left: auto; margin-right: auto; }
+}
+@media only screen and (min-width: 992px) {
+    .ui.container { width: 933px; }
+}
+@media only screen and (min-width: 1200px) {
+    .ui.container { width: 1127px; }
+}
+@media only screen and (min-width: 1920px) {
+    .ui.container { width: 1207px; }
+}
+
+/* ====================== GRID ====================== */
+.ui.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding: 0;
+    margin: -1rem;
+}
+.ui.grid > .column:not(.row),
+.ui.grid > .row > .column {
+    position: relative;
+    display: inline-block;
+    width: 6.25%;
+    padding: 1rem;
+    vertical-align: top;
+}
+.ui.grid > .row > .six.wide.column,
+.ui.grid > .six.wide.column { width: 37.5%; }
+.ui.grid > .row > .ten.wide.column,
+.ui.grid > .ten.wide.column { width: 62.5%; }
+.ui.grid > .row > .sixteen.wide.column,
+.ui.grid > .sixteen.wide.column { width: 100%; }
+
+/* Mobile: columns stack */
+@media only screen and (max-width: 767px) {
+    .ui.grid > .row > .column,
+    .ui.grid > .column:not(.row) {
+        width: 100% !important;
+    }
+}
+
+/* ====================== SEGMENT ====================== */
+.ui.segment {
+    position: relative;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+    margin: 1rem 0;
+    padding: 1em;
+    border-radius: .28571429rem;
+    border: 1px solid rgba(34,36,38,.15);
+}
+.ui.segment:first-child { margin-top: 0; }
+.ui.segment:last-child { margin-bottom: 0; }
+.ui.raised.segment {
+    box-shadow: 0 0 0 1px rgba(34,36,38,.15),
+                0 2px 4px 0 rgba(34,36,38,.12),
+                0 2px 10px 0 rgba(34,36,38,.15);
+}
+
+/* ====================== BUTTON ====================== */
+.ui.button {
+    cursor: pointer;
+    display: inline-block;
+    min-height: 1em;
+    outline: 0;
+    border: none;
+    vertical-align: baseline;
+    background: #e0e1e2 none;
+    color: rgba(0,0,0,.6);
+    font-family: inherit;
+    margin: 0 .25em 0 0;
+    padding: .78571429em 1.5em;
+    text-transform: none;
+    text-shadow: none;
+    font-weight: 700;
+    line-height: 1em;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34,36,38,.15) inset;
+    user-select: none;
+    transition: opacity .1s ease, background-color .1s ease, color .1s ease, box-shadow .1s ease;
+}
+.ui.button:hover {
+    background-color: #cacbcd;
+    color: rgba(0,0,0,.8);
+}
+.ui.green.button { background-color: #21ba45; color: #fff; }
+.ui.green.button:hover { background-color: #16ab39; color: #fff; }
+.ui.huge.button { font-size: 1.42857143rem; }
+.ui.large.button { font-size: 1.14285714rem; }
+
+/* ====================== FORM ====================== */
+.ui.form { position: relative; max-width: 100%; }
+.ui.form > .field { clear: both; margin: 0 0 1em; }
+.ui.form .field > label {
+    display: block;
+    margin: 0 0 .28571429rem;
+    color: rgba(0,0,0,.87);
+    font-size: .92857143em;
+    font-weight: 700;
+    text-transform: none;
+}
+.ui.form input:not([type]),
+.ui.form input[type="text"],
+.ui.form input[type="email"],
+.ui.form input[type="search"],
+.ui.form input[type="tel"],
+.ui.form input[type="url"],
+.ui.form textarea {
+    width: 100%;
+    padding: .67857143em 1em;
+    background: #fff;
+    border: 1px solid rgba(34,36,38,.15);
+    border-radius: .28571429rem;
+    color: rgba(0,0,0,.87);
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 1.21428571em;
+}
+
+/* ====================== HEADER ====================== */
+.ui.header {
+    border: none;
+    margin: calc(2rem - .14285em) 0 1rem;
+    padding: 0;
+    font-weight: 700;
+    line-height: 1.2857em;
+    text-transform: none;
+    color: rgba(0,0,0,.87);
+}
+.ui.header:first-child { margin-top: -.14285em; }
+.ui.header:last-child { margin-bottom: 0; }
+
+/* ====================== LABEL ====================== */
+.ui.label {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: baseline;
+    margin: 0 .14285714em;
+    background-color: #e8e8e8;
+    background-image: none;
+    padding: .5833em .833em;
+    color: rgba(0,0,0,.6);
+    text-transform: none;
+    font-weight: 700;
+    border: 0 solid transparent;
+    border-radius: .28571429rem;
+}
+.ui.large.label { font-size: 1rem; }
+
+/* ====================== TABLE ====================== */
+.ui.table {
+    width: 100%;
+    background: #fff;
+    margin: 1em 0;
+    border: 1px solid rgba(34,36,38,.15);
+    box-shadow: none;
+    border-radius: .28571429rem;
+    text-align: left;
+    color: rgba(0,0,0,.87);
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.ui.table th,
+.ui.table td { padding: .78571429em; }
+.ui.table thead th {
+    background: #f9fafb;
+    font-weight: 700;
+    color: rgba(0,0,0,.87);
+    border-bottom: 1px solid rgba(34,36,38,.1);
+}
+.ui.table tr td { border-top: 1px solid rgba(34,36,38,.1); }
+.ui.table tr:first-child td { border-top: none; }
+
+.ui.very.basic.table {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+.ui.very.basic.table thead th,
+.ui.very.basic.table th,
+.ui.very.basic.table td {
+    background: transparent;
+    padding: .78571429em 1em;
+    border-left: none;
+}
+.ui.very.basic.table thead th { border-bottom: 1px solid rgba(0,0,0,.1); }
